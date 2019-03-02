@@ -11,15 +11,31 @@ module.exports = (app) => {
   });
 
   app.post("/api/friends", (req, res) => {
+
+    var collectedScores = [];
+    var receivingUser = req.body;
+    parseIntScores(collectedScores, receivingUser);
+
+    // Creates a New User Object
+    var newUser = {
+      name: req.body.name,
+      photo: req.body.photo,
+      scores: collectedScores
+    }
+    console.log(newUser.scores);
+
     // Push new entry to our friendsArray
-    friendsArray.push(req.body);
+    friendsArray.push(newUser);
+
     // Defining our variables
-    var user1Scores = req.body.scores
-    var bestMatchDiff= 0;
+    var user1Scores = newUser.scores
+    console.log(typeof (user1Scores[0]));
+    var bestMatchDiff = 0;
     var keys = Object.keys(friendsArray);
     var diffArray = [];
     var bestIndexArray = [];
-    
+    var topMatchesArray = [];
+
     // It Compares the recent user's answer agains our friends Array
     // Tries to match with the user/s with the least amount of difference between the questions
     checkBestMatches(keys, user1Scores, diffArray);
@@ -32,10 +48,20 @@ module.exports = (app) => {
     getAllMatchinIndexes(diffArray, bestMatchDiff, bestIndexArray);
 
     // Returns the best match/es 
-    returnBestMatches(bestIndexArray, friendsArray);
-    
+    getBestMatches(bestIndexArray, friendsArray, topMatchesArray);
+    res.json(topMatchesArray);
+
   });
 };
+
+function parseIntScores(collectedScores, receivingUser) {
+  for (var i = 0; i < 10; i++) {
+    collectedScores.push(parseInt(receivingUser.scores[i]));
+  }
+  for (let i = 0; i < collectedScores.length; i++) {
+    console.log(typeof (collectedScores[i]));
+  }
+}
 
 // It Compares the recent user's answer agains our friends Array
 // Tries to match with the user/s with the least amount of difference between the questions
@@ -67,11 +93,10 @@ function getAllMatchinIndexes(diffArray, bestMatchDiff, bestIndexArray) {
 }
 
 // Returns the best match/es 
-function returnBestMatches(bestIndexArray, friendsArray) {
+function getBestMatches(bestIndexArray, friendsArray, topMatchesArray) {
   for (var g = 0; g < bestIndexArray.length; g++) {
     var index = bestIndexArray[g];
     console.log("Name: " + friendsArray[index].name);
+    topMatchesArray.push(friendsArray[index]);
   }
 }
-
-
