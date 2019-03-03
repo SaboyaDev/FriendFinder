@@ -2,6 +2,7 @@
 // ===========================================================
 var express = require("express");
 var path = require("path");
+// var fs = require("fs");
 
 // Express configuration
 // ===========================================================
@@ -13,12 +14,13 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'));
-// app.use('/images',express.static(path.join(__dirname, 'public/images')));
-// app.use('/javascript',express.static(path.join(__dirname, 'public/javascripts')));
-// app.use('/css',express.static(path.join(__dirname, 'public/css')));
-
-
+app.use(express.static('app/public'));
+// app.get("/index.html", (req, res) => {
+// 	fs.readFile(path.join(__dirname, "app/public/html/index.html"), (err, data) => { // means you are mapping /index.html to ./public/index.html
+//     if (err) throw err;
+//     res.send(data);
+//   });
+// });
 
 // Route Files
 // ===========================================================

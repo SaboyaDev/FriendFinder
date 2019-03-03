@@ -2,16 +2,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- Bootstrap 4.3.1 jQuery and Popper.js -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script> -->
 
-  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin="anonymous"></script>
@@ -22,235 +21,389 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
+
+
   <!-- Font Awesome Glyphicons -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="../css/survey.css" />
 
   <title>Survey</title>
 </head>
 
 <body>
 
-  <nav class="navbar navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">
-      <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-      Bootstrap
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Dropdown link
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+  <div class="mainWrapper">
+    <div class="topPageWrapper">
+      <div class=" navbarWrapper">
+        <nav class="navbar navbar-dark bg-dark navbar-expand-lg nav">
+          <a class="navbar-brand" href="/">
+            <img class="logo" src="../images/earth.svg">Friend Finder</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <hr>
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/survey">Survey</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/api/friends">API Friends List</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://github.com/joseluissaboya/FriendFinde">Github Repo</a>
+              </li>
+            </ul>
           </div>
-        </li>
-      </ul>
+        </nav>
+      </div>
+      <div class="introMessage">
+        <p>Ready?</p>
+        <p>Click Below to Start...</p>
+      </div>
+      <a href="#surveyForm"><i class="fas fa-chevron-circle-down arrow"></i></a>
     </div>
-  </nav>
 
-  <div class="container">
-    <form role="form" id="surveyForm">
-      <h3>About You</h3>
-      <br>
-      <h4>Name (Required)</h4>
-      <input type="text" id="name" class="form-control">
-      <br>
-      <h4>Img url(Required)</h4>
-      <input type="text" id="img" class="form-control">
+    <div class="container mainQuestionContainer">
+      <form role="form" id="surveyForm" class="form">
+        <div class="col" id="basicUserInfo">
+          <p class="aboutYouTitle">About You:</p>
+          <br>
+          <p class="basicInfo">Name (Required)</p>
+          <input type="text" id="name" class="form-control" placeholder="First Last">
+          <br>
+          <p class="basicInfo">Image (Required)</p>
+          <input type="text" id="img" class="form-control" placeholder="URL-Link">
+        </div>
 
-      <div class="row">
-        <div class="col-sm-6">
-          <!-- Question 1 -->
-          <div class="form-group col">
-            <h5><strong>Question 1</strong></h5>
-            <label for="q1">I Love people...</label>
-            <select class="form-control form-control-sm col-6 col-sm-4 col-lg-3 chosen-select" id="q1" name="q1">
-              <option>Choose an option...</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
+        <div class="accordion" id="question-accordion">
+
+          <div class="card" id="card1">
+            <div class="card-header" id="headingOne">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne"
+                  aria-expanded="false" aria-controls="collapseOne">
+                  <p class="q-numb">Question 1</p>
+                </button>
+              </h2>
+            </div>
+            <!-- Collapse Data -->
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#question-accordion">
+              <div class="card-body">
+                <!-- Question 1 -->
+                <div class="form-group col">
+                  <label for="q1">I Love people...</label>
+                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3 chosen-select" id="q1" name="q1">
+                    <option>Choose an option...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- Question 2 -->
-          <div class="form-group col">
-            <h5><strong>Question 2 </strong></h5>
-            <label for="q2">Family is everything to me...</label>
-            <select class="form-control form-control-sm col-6 col-sm-4 col-lg-3" id="q2" name="q2">
-              <option>Choose an option...</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
+
+          <div class="card" id="card2">
+            <div class="card-header" id="headingTwo">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                  aria-expanded="false" aria-controls="collapseTwo">
+                  <p class="q-numb">Question 2</p>
+                </button>
+              </h2>
+            </div>
+            <!-- Collapse Data -->
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#question-accordion">
+              <div class="card-body">
+                <!-- Question 2 -->
+                <div class="form-group col">
+                  <label for="q2">I normally follow my heart(1) <- or -> head(5)</label>
+                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q2" name="q2">
+                    <option>Choose an option...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- Question 3 -->
-          <div class="form-group col">
-            <h5><strong>Question 3</strong></h5>
-            <label for="q3">I Love people...</label>
-            <select class="form-control form-control-sm col-6 col-sm-4 col-lg-3" id="q3" name="q3">
-              <option>Choose an option...</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
+
+          <div class="card" id="card3">
+            <div class="card-header" id="headingThree">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                  aria-expanded="false" aria-controls="collapseThree">
+                  <p class="q-numb">Question 3</p>
+                </button>
+              </h2>
+            </div>
+            <!-- Collapse Data -->
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#question-accordion">
+              <div class="card-body">
+                <!-- Question 2 -->
+                <div class="form-group col">
+                  <label for="q3">It's easy for me to forgive...</label>
+                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q3" name="q3">
+                    <option>Choose an option...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- Question 4 -->
-          <div class="form-group col">
-            <h5><strong>Question 4</strong></h5>
-            <label for="q1">Be in charge is really important...</label>
-            <select class="form-control form-control-sm col-6 col-sm-4 col-lg-3" id="q4" name="q4">
-              <option>Choose an option...</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
+
+          <div class="card" id="card4">
+            <div class="card-header" id="headingFour">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+                  aria-expanded="false" aria-controls="collapseFour">
+                  <p class="q-numb">Question 4</p>
+                </button>
+              </h2>
+            </div>
+            <!-- Collapse Data -->
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#question-accordion">
+              <div class="card-body">
+                <!-- Question 4 -->
+                <div class="form-group col">
+                  <label for="q4">Be in charge is really important...</label>
+                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q4" name="q4">
+                    <option>Choose an option...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
-          <!-- Question 5-->
-          <div class="form-group col">
-            <h5><strong>Question 5</strong></h5>
-            <label for="q1">Prefer to spend time alone...</label>
-            <select class="form-control form-control-sm col-6 col-sm-4 col-lg-3" id="q5" name="q5">
-              <option>Choose an option...</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
+
+          <div class="card" id="card5">
+            <div class="card-header" id="headingFive">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive"
+                  aria-expanded="false" aria-controls="collapseFive">
+                  <p class="q-numb">Question 5</p>
+                </button>
+              </h2>
+            </div>
+            <!-- Collapse Data -->
+            <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#question-accordion">
+              <div class="card-body">
+                <!-- Question 5-->
+                <div class="form-group col">
+                  <label for="q5">I Prefer to spend time alone...</label>
+                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q5" name="q5">
+                    <option>Choose an option...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="card6">
+            <div class="card-header" id="headingSix">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix"
+                  aria-expanded="false" aria-controls="collapseSix">
+                  <p class="q-numb">Question 6</p>
+                </button>
+              </h2>
+            </div>
+            <!-- Collapse Data -->
+            <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#question-accordion">
+              <div class="card-body">
+                <!-- Question 6 -->
+                <div class="form-group col">
+                  <label for="q6">I normally follow my heart(1) <- or -> head(5)</label>
+                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q6" name="q6">
+                    <option>Choose an option...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="card7">
+            <div class="card-header" id="headingSeven">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven"
+                  aria-expanded="false" aria-controls="collapseSeven">
+                  <p class="q-numb">Question 7</p>
+                </button>
+              </h2>
+            </div>
+            <!-- Collapse Data -->
+            <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#question-accordion">
+              <div class="card-body">
+                <!-- Question 7 -->
+                <div class="form-group col">
+                  <label for="q7">I normally follow my heart(1) <- or -> head(5)</label>
+                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q7" name="q7">
+                    <option>Choose an option...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="card8">
+            <div class="card-header" id="headingEight">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight"
+                  aria-expanded="false" aria-controls="collapseEight">
+                  <p class="q-numb">Question 8</p>
+                </button>
+              </h2>
+            </div>
+            <!-- Collapse Data -->
+            <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#question-accordion">
+              <div class="card-body">
+                <!-- Question 8 -->
+                <div class="form-group col">
+                  <label for="q8">I normally follow my heart(1) <- or -> head(5)</label>
+                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q8" name="q8">
+                    <option>Choose an option...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="card9">
+            <div class="card-header" id="headingNine">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine"
+                  aria-expanded="false" aria-controls="collapseNine">
+                  <p class="q-numb">Question 9</p>
+                </button>
+              </h2>
+            </div>
+            <!-- Collapse Data -->
+            <div id="collapseNine" class="collapse" aria-labelledby="headingNine" data-parent="#question-accordion">
+              <div class="card-body">
+                <!-- Question 9 -->
+                <div class="form-group col">
+                  <label for="q9">I normally follow my heart(1) <- or -> head(5)</label>
+                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q9" name="q9">
+                    <option>Choose an option...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" id="card10">
+            <div class="card-header" id="headingTen">
+              <h2 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen"
+                  aria-expanded="false" aria-controls="collapseTen">
+                  <p class="q-numb">Question 10</p>
+                </button>
+              </h2>
+            </div>
+            <!-- Collapse Data -->
+            <div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#question-accordion">
+              <div class="card-body">
+                <!-- Question 10 -->
+                <div class="form-group col">
+                  <label for="q10">I normally follow my heart(1) <- or -> head(5)</label>
+                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q10" name="q10">
+                    <option>Choose an option...</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                </div>
+              </div>
+            </div>
           </div>
 
         </div>
 
-        <div class="col-sm-6">
-          <div class="form-group col">
-            <h5><strong>Question 6</strong></h5>
-            <label for="q1">I expect people to compliment me...</label>
-            <select class="form-control form-control-sm col-6 col-sm-4 col-lg-3" id="q6" name="q6">
-              <option>Choose an option...</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          <div class="form-group col">
-            <h5><strong>Question 7</strong></h5>
-            <label for="q1">Preparation is everything...</label>
-            <select class="form-control form-control-sm col-6 col-sm-4 col-lg-3" id="q7" name="q7">
-              <option>Choose an option...</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          <div class="form-group col">
-            <h5><strong>Question 8</strong></h5>
-            <label for="q1">My word is everything...</label>
-            <select class="form-control form-control-sm col-6 col-sm-4 col-lg-3" id="q8" name="q8">
-              <option>Choose an option...</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          <div class="form-group col">
-            <h5><strong>Question 9</strong></h5>
-            <label for="q1">I like to do things out of the moment...</label>
-            <select class="form-control form-control-sm col-6 col-sm-4 col-lg-3" id="q9" name="q9">
-              <option>Choose an option...</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-          </div>
-          <div class="form-group col">
-            <h5><strong>Question 10</strong></h5>
-            <label for="q1">I finish what I start...</label>
-            <select class="form-control form-control-sm col-6 col-sm-4 col-lg-3" id="q10" name="q10">
-              <option>Choose an option...</option>
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
+        <div class="submitButton">
+          <button type="submit" class="submitBtn">Submit</button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="show-results-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalTitle">Best Match Or Matches</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn modalBtn" data-dismiss="modal">Close</button>
+              </div>
+            </div>
           </div>
         </div>
+
+      </form>
+    </div>
+
+    <footer class="footerSurvey">
+      <div class="container">
+        <p class="footerPartA"><a href="/api/friends" target="_blank">API Friends List </a><span>|</span><a href="https://github.com/joseluissaboya/FriendFinder"
+            target="_blank"> GitHub Repo</a></p>
       </div>
-      <button type="submit" id="submit" class="btn btn-primary">Submit</button>
-
-      <!-- Modal -->
-      <div class="modal fade" id="show-results-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalTitle">Best Match Or Matches</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </form>
+      <P class="footerParB">Jose L Saboya &copy; 2019</P>
+    </footer>
   </div>
 
-  <hr>
-  <footer class="footer">
-    <div class="container">
-      <p>
-        <a href="/">Home</a> |<a href="/api/friends" target="_blank">API Friends List</a>
-        |
-        <a href="https://github.com/joseluissaboya/FriendFinder" target="_blank">GitHub Repo</a>
-      </p>
-    </div>
-  </footer>
-
-  <!-- <script src="../javascript/main.js"></script> -->
-  <!-- <script>
-    
-  </script> -->
+  <script src="../javascript/main.js"></script>
 
 </body>
 

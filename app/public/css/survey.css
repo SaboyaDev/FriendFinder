@@ -1,0 +1,193 @@
+
+@import url('https://fonts.googleapis.com/css?family=Laila:400,700');
+
+@font-face {
+  font-family: "Takota";
+  src: url("../css/fonts/Takota.ttf"); 
+}
+@font-face {
+  font-family: "coolvetica";
+  src: url("../css/fonts/coolvetica.otf"),
+       url("../css/fonts/Takota.ttf") 
+}
+
+/* ===================================================== */
+.mainWrapper {
+  min-height: 100% !important;
+}
+
+/* ===================================================== */
+.topPageWrapper {
+  background-image: url("../images/friends.jpeg");
+  height: 805px;
+  background-position: center;
+  background-size: cover;
+  background-origin: content-box;
+}
+
+.nav {
+  background-color: #000000!important;
+}
+.navbar-brand {
+  font-family: "Takota"!important;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+
+.logo {
+  background-color: white;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px; 
+  margin-right: 10px;
+}
+
+a {
+  color: #EFF5FC;
+}
+
+.navbar-toggler-icon {
+  border-color: white;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 0.75em;
+}
+
+i {
+  margin-right: 0.5em;
+}
+
+/* ===================================================== */
+.introMessage {
+  text-align: center;
+  position: absolute;
+  color: white;
+  bottom: 150px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 28px;
+}
+
+.introMessage p {
+  text-shadow: 2px 2px 20px
+black;}
+
+.fa-chevron-circle-down {
+  position: absolute;
+  z-index: 1;
+  color: white;
+  bottom: 25px;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 55px;
+  padding: 15px;
+}
+
+/* ===================================================== */
+.accordion {
+  margin: 40px 0 40px 0;
+}
+
+.card {
+  border-radius: 35px;
+  
+}
+
+.card-header {
+  text-align: center;
+}
+
+.q-numb {
+  font-weight: 900!important;
+  color: rgb(0, 0, 0);
+}
+
+.form {
+  margin-bottom: 15px;
+}
+
+.mainQuestionContainer {
+  margin-top: 60px;
+  font-family: "Laila", serif;
+}
+
+.aboutYouTitle {
+  font-size: 26px;
+  font-weight: 900!important;
+}
+
+.basicInfo {
+  font-size: 18px;
+  font-weight: 900!important;
+}
+
+.allQuestions {
+  margin-top: 45px;
+}
+
+
+
+label {
+  font-size: 1em;
+}
+
+input {
+  border-radius: 30px;
+}
+
+.submitButton {
+  text-align: center;
+}
+.submitBtn {
+  background-color: black;
+  color: white;
+  margin-bottom: 20px; 
+  border-radius: 10px 25px 10px 25px;
+  padding: 6px 15px;
+}
+
+/* ===================================================== */
+.close {
+  color: white;
+}
+
+.modal-content {
+  font-family: "Laila", serif;
+}
+
+.modal-header,
+.modalBtn {
+  background-color: black;
+  color: white;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.modal-footer {
+  justify-content: center !important;
+}
+
+/* ===================================================== */
+footer {
+  text-align: center;
+  /* position: absolute; */
+  background-color: black;
+  height: 8em;
+  width: 100vw;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  color: white;
+  font-size: 0.75em;
+}
+
+.testing {
+  width: 30px;
+  margin-right: 5px; 
+  background-color: white;
+}

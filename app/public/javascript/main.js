@@ -1,4 +1,4 @@
-$("#submit").on("click", function (event) {
+$(".submitBtn").on("click", function (event) {
 
   event.preventDefault();
 
@@ -18,13 +18,15 @@ $("#submit").on("click", function (event) {
       $("#q10").val()
     ]
   };
+  console.log(userData);
+
   // AJAX post the data to the friends API.
   $.post("/api/friends", userData, function (data) {
 
-
-    // // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-    // $("#match-name").text(data.name);
-    // // $("#match-img").attr("src", data.photo);
+    console.log(data);
+    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+    $("#match-name").text(data.name);
+    $("#match-img").attr("src", data.photo);
     for (var i = 0; i < data.length; i++) {
       console.log(data[i].name);
       var matchName = data[i].name;
@@ -34,15 +36,12 @@ $("#submit").on("click", function (event) {
       $(".modal-body").append("<p>" + matchName + "</p>");
       $(".modal-body").append($("<img>").attr("src", matchPhoto).css({
         height: "150px",
-        width: "100px"
+        width: "100px",
+        "margin-bottom": "30px" 
       }));
+      $("#show-results-modal").modal("toggle");
+      $("#name").val("");
+      $("#img").val("");
     }
-
-    $("#show-results-modal").modal("toggle");
-
-
-    $("#name").val("");
-    $("#img").val("");
   });
-
 });
