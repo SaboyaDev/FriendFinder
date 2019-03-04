@@ -133,6 +133,11 @@ a {
   text-align: center;
 }
 
+.btn.btn-link {
+  width: 100%;
+  padding: 1px;
+}
+
 .q-numb {
   font-weight: 900 !important;
   color: rgb(0, 0, 0);

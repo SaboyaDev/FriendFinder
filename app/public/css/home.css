@@ -20,7 +20,7 @@ body {
 /* ===================================================== */
 .topPageWrapper {
   background-image: url("../images/mainPics.jpeg");
-  height: 100vh;
+  height: 100%;
   background-position: center;
   background-size: cover;
   background-origin: content-box;
