@@ -1,45 +1,56 @@
-
 @import url('https://fonts.googleapis.com/css?family=Laila:400,700');
 
 @font-face {
   font-family: "Takota";
-  src: url("../css/fonts/Takota.ttf"); 
+  src: url("../css/fonts/Takota.ttf");
 }
+
 @font-face {
   font-family: "coolvetica";
   src: url("../css/fonts/coolvetica.otf"),
-       url("../css/fonts/Takota.ttf") 
+    url("../css/fonts/Takota.ttf")
 }
 
 /* ===================================================== */
+html,
+body {
+  height: 100% !important;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
 .mainWrapper {
-  min-height: 100% !important;
+  flex: 1 0 auto;
 }
 
 /* ===================================================== */
 .topPageWrapper {
   background-image: url("../images/friends.jpeg");
-  height: 805px;
+  height: 50.938em;
   background-position: center;
   background-size: cover;
   background-origin: content-box;
 }
 
 .nav {
-  background-color: #000000!important;
+  background-color: #000000 !important;
 }
+
 .navbar-brand {
-  font-family: "Takota"!important;
-  font-size: 25px;
-  letter-spacing: 3px;
+  font-family: "Takota" !important;
+  font-size: 1.563em;
+  letter-spacing: 0.188em;
 }
 
 .logo {
   background-color: white;
   border-radius: 100%;
-  width: 30px;
-  height: 30px; 
-  margin-right: 10px;
+  width: 1.188em;
+  height: 1.188em; 
+  margin-right: 0.5em;
 }
 
 a {
@@ -55,10 +66,6 @@ a {
   font-size: 0.75em;
 }
 
-i {
-  margin-right: 0.5em;
-}
-
 /* ===================================================== */
 .introMessage {
   text-align: center;
@@ -71,8 +78,8 @@ i {
 }
 
 .introMessage p {
-  text-shadow: 2px 2px 20px
-black;}
+  text-shadow: 2px 2px 20px black;
+}
 
 .fa-chevron-circle-down {
   position: absolute;
@@ -90,20 +97,6 @@ black;}
   margin: 40px 0 40px 0;
 }
 
-.card {
-  border-radius: 35px;
-  
-}
-
-.card-header {
-  text-align: center;
-}
-
-.q-numb {
-  font-weight: 900!important;
-  color: rgb(0, 0, 0);
-}
-
 .form {
   margin-bottom: 15px;
 }
@@ -113,21 +106,42 @@ black;}
   font-family: "Laila", serif;
 }
 
+#basicUserInfo {
+  padding-top: 30px;
+}
+
 .aboutYouTitle {
   font-size: 26px;
-  font-weight: 900!important;
+  font-weight: 900 !important;
 }
 
 .basicInfo {
   font-size: 18px;
-  font-weight: 900!important;
+  font-weight: 900 !important;
 }
 
 .allQuestions {
   margin-top: 45px;
 }
 
+.card {
+  border-radius: 35px;
 
+}
+
+.card-header {
+  text-align: center;
+}
+
+.q-numb {
+  font-weight: 900 !important;
+  color: rgb(0, 0, 0);
+}
+
+.card-body,
+select {
+  text-align: center;
+}
 
 label {
   font-size: 1em;
@@ -140,10 +154,11 @@ input {
 .submitButton {
   text-align: center;
 }
+
 .submitBtn {
   background-color: black;
   color: white;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   border-radius: 10px 25px 10px 25px;
   padding: 6px 15px;
 }
@@ -173,11 +188,11 @@ input {
 
 /* ===================================================== */
 footer {
+  flex-shrink: 0;
   text-align: center;
-  /* position: absolute; */
   background-color: black;
   height: 8em;
-  width: 100vw;
+  width: auto;
   right: 0;
   bottom: 0;
   left: 0;
@@ -186,8 +201,24 @@ footer {
   font-size: 0.75em;
 }
 
-.testing {
-  width: 30px;
-  margin-right: 5px; 
-  background-color: white;
+/* Media Query */
+/* ===================================================== */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .topPageWrapper {
+    height: 935px;
+  }
+  .fa-chevron-circle-down {
+    bottom: 1.2em;
+  }
 }
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}

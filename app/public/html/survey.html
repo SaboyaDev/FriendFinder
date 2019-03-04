@@ -7,9 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <!-- Bootstrap 4.3.1 jQuery and Popper.js -->
-  <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script> -->
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
@@ -21,8 +18,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
-
-
   <!-- Font Awesome Glyphicons -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
     crossorigin="anonymous">
@@ -33,7 +28,6 @@
 </head>
 
 <body>
-
   <div class="mainWrapper">
     <div class="topPageWrapper">
       <div class=" navbarWrapper">
@@ -54,19 +48,21 @@
                 <a class="nav-link" href="/survey">Survey</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/api/friends">API Friends List</a>
+                <a class="nav-link" href="/api/friends" target="_blank">API Friends List</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="https://github.com/joseluissaboya/FriendFinde">Github Repo</a>
+                <a class="nav-link" href="https://github.com/joseluissaboya/FriendFinder" target="_blank">Github Repo</a>
               </li>
             </ul>
           </div>
         </nav>
       </div>
+      
       <div class="introMessage">
         <p>Ready?</p>
         <p>Click Below to Start...</p>
       </div>
+
       <a href="#surveyForm"><i class="fas fa-chevron-circle-down arrow"></i></a>
     </div>
 
@@ -98,8 +94,8 @@
               <div class="card-body">
                 <!-- Question 1 -->
                 <div class="form-group col">
-                  <label for="q1">I Love people...</label>
-                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3 chosen-select" id="q1" name="q1">
+                  <label for="q1">How is your patience, Are you very tolerable</label>
+                  <select class="form-control form-control-sm  chosen-select" id="q1" name="q1">
                     <option>Choose an option...</option>
                     <option>1</option>
                     <option>2</option>
@@ -126,8 +122,8 @@
               <div class="card-body">
                 <!-- Question 2 -->
                 <div class="form-group col">
-                  <label for="q2">I normally follow my heart(1) <- or -> head(5)</label>
-                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q2" name="q2">
+                  <label for="q2">Are you quick to making a decision?</label>
+                  <select class="form-control form-control-sm " id="q2" name="q2">
                     <option>Choose an option...</option>
                     <option>1</option>
                     <option>2</option>
@@ -155,7 +151,7 @@
                 <!-- Question 2 -->
                 <div class="form-group col">
                   <label for="q3">It's easy for me to forgive...</label>
-                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q3" name="q3">
+                  <select class="form-control form-control-sm " id="q3" name="q3">
                     <option>Choose an option...</option>
                     <option>1</option>
                     <option>2</option>
@@ -182,8 +178,8 @@
               <div class="card-body">
                 <!-- Question 4 -->
                 <div class="form-group col">
-                  <label for="q4">Be in charge is really important...</label>
-                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q4" name="q4">
+                  <label for="q4">Do you like being in charge?</label>
+                  <select class="form-control form-control-sm " id="q4" name="q4">
                     <option>Choose an option...</option>
                     <option>1</option>
                     <option>2</option>
@@ -210,8 +206,8 @@
               <div class="card-body">
                 <!-- Question 5-->
                 <div class="form-group col">
-                  <label for="q5">I Prefer to spend time alone...</label>
-                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q5" name="q5">
+                  <label for="q5">Do you refer to spend time alone...</label>
+                  <select class="form-control form-control-sm " id="q5" name="q5">
                     <option>Choose an option...</option>
                     <option>1</option>
                     <option>2</option>
@@ -238,8 +234,8 @@
               <div class="card-body">
                 <!-- Question 6 -->
                 <div class="form-group col">
-                  <label for="q6">I normally follow my heart(1) <- or -> head(5)</label>
-                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q6" name="q6">
+                  <label for="q6">Are you led by your heart?</label>
+                  <select class="form-control form-control-sm " id="q6" name="q6">
                     <option>Choose an option...</option>
                     <option>1</option>
                     <option>2</option>
@@ -266,8 +262,8 @@
               <div class="card-body">
                 <!-- Question 7 -->
                 <div class="form-group col">
-                  <label for="q7">I normally follow my heart(1) <- or -> head(5)</label>
-                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q7" name="q7">
+                  <label for="q7">How important is your word?</label>
+                  <select class="form-control form-control-sm " id="q7" name="q7">
                     <option>Choose an option...</option>
                     <option>1</option>
                     <option>2</option>
@@ -294,8 +290,8 @@
               <div class="card-body">
                 <!-- Question 8 -->
                 <div class="form-group col">
-                  <label for="q8">I normally follow my heart(1) <- or -> head(5)</label>
-                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q8" name="q8">
+                  <label for="q8">How important is family?</label>
+                  <select class="form-control form-control-sm " id="q8" name="q8">
                     <option>Choose an option...</option>
                     <option>1</option>
                     <option>2</option>
@@ -322,8 +318,8 @@
               <div class="card-body">
                 <!-- Question 9 -->
                 <div class="form-group col">
-                  <label for="q9">I normally follow my heart(1) <- or -> head(5)</label>
-                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q9" name="q9">
+                  <label for="q9">Do you always finish what you start?</label>
+                  <select class="form-control form-control-sm " id="q9" name="q9">
                     <option>Choose an option...</option>
                     <option>1</option>
                     <option>2</option>
@@ -350,8 +346,8 @@
               <div class="card-body">
                 <!-- Question 10 -->
                 <div class="form-group col">
-                  <label for="q10">I normally follow my heart(1) <- or -> head(5)</label>
-                  <select class="form-control form-control-sm col-7 col-sm-4 col-lg-3" id="q10" name="q10">
+                  <label for="q10">What is importance of money in your life?</label>
+                  <select class="form-control form-control-sm " id="q10" name="q10">
                     <option>Choose an option...</option>
                     <option>1</option>
                     <option>2</option>
@@ -393,15 +389,22 @@
 
       </form>
     </div>
-
-    <footer class="footerSurvey">
-      <div class="container">
-        <p class="footerPartA"><a href="/api/friends" target="_blank">API Friends List </a><span>|</span><a href="https://github.com/joseluissaboya/FriendFinder"
-            target="_blank"> GitHub Repo</a></p>
-      </div>
-      <P class="footerParB">Jose L Saboya &copy; 2019</P>
-    </footer>
   </div>
+
+  <footer class="footerSurvey">
+    <div class="container">
+
+      <p class="footerPartA">
+        <a href="/" target="_blank">Home</a>
+        <span>|</span>
+        <a href="/api/friends" target="_blank">API Friends List</a>
+        <span>|</span>
+        <a href="https://github.com/joseluissaboya/FriendFinder"
+          target="_blank"> GitHub Repo</a>
+      </p>
+    </div>
+    <P class="footerParB">Jose L Saboya &copy; 2019</P>
+  </footer>
 
   <script src="../javascript/main.js"></script>
 

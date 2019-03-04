@@ -4,27 +4,27 @@
 }
 
 /* ===================================================== */
-html,
-body {
+html, body {
   height: 100% !important;
-  min-height: 100%;
-  padding: 0;
-  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
 }
 
 .mainWrapper {
-  min-height: 100% !important;
-  margin-bottom: -10em !important;
-  padding-bottom: 6em !important;
+  flex: 1 0 auto;
 }
 
 /* ===================================================== */
 .topPageWrapper {
   background-image: url("../images/mainPics.jpeg");
-  height: 755px;
+  height: 100vh;
   background-position: center;
   background-size: cover;
   background-origin: content-box;
+  margin-bottom: -8em;
 }
 
 .nav {
@@ -40,9 +40,9 @@ body {
 .logo {
   background-color: white;
   border-radius: 100%;
-  width: 30px;
-  height: 30px; 
-  margin-right: 10px;
+  width: 1.188em;
+  height: 1.188em; 
+  margin-right: 0.5em;
 }
 
 a {
@@ -58,14 +58,10 @@ a {
   font-size: 0.75em;
 }
 
-i {
-  margin-right: 0.5em;
-}
-
 /* ===================================================== */
 .surveyButton {
   position: absolute;
-  top: 78%;
+  top: 76%;
   left: 50%;
   transform: translate(-50%, 0);
 }
@@ -75,13 +71,13 @@ i {
   border: 2px solid white;
   border-radius: 25px;
   color: white;
-  padding: 0.2em;
+  padding: 0.2em 1em 0.2em 1em;
 }
 
 /* ===================================================== */
 footer {
+  flex-shrink: 0;
   text-align: center;
-  position: absolute;
   background-color: black;
   height: 8em;
   width: 100vw;
@@ -97,3 +93,19 @@ footer {
   position: unset;
 }
 
+/* Media Query */
+/* ===================================================== */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
