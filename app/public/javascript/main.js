@@ -1,10 +1,10 @@
 $(".submitBtn").on("click", function (event) {
   event.preventDefault();
-  collectUserInput(scores);
+  collectUserInput();
   clearValueInputs();
 });
 
-function collectUserInput(scores) {
+function collectUserInput() {
   var scores = [];
   for (var i = 1; i <= 10; i++) {
     scores.push($("#q" + i).val())
@@ -14,6 +14,7 @@ function collectUserInput(scores) {
     photo: $("#img").val(),
     scores: scores
   };
+  console.log(userData);
   postUserData(userData);
 }
 
